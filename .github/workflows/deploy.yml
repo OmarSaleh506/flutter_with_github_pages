@@ -39,9 +39,11 @@ jobs:
             echo "PAT secret is accessible."
           fi
 
-      # Step 6: Deploy to GitHub Pages
+      # Step 6: Deploy to GitHub Pages (main branch)
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.PAT }} # Use the PAT here
           publish_dir: ./build/web
+          destination_dir: ./ # Deploy to the root of the main branch
+          keep_files: false # Overwrite existing files in the main branch
