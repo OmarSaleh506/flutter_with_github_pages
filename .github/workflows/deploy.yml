@@ -43,7 +43,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.PAT }} # Use the PAT here
+          github_token: ${{ secrets.PAT }}
           publish_dir: ./build/web
           destination_dir: ./ # Deploy to the root of the main branch
           keep_files: false # Overwrite existing files in the main branch
